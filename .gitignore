@@ -1,0 +1,7 @@
+publish
+node_modules
+build
+!.eslintrc.js
+!.gitignore
+!.mocharc.js
+!.vscode
