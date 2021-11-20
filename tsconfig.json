@@ -1,5 +1,9 @@
 {
+  "ts-node": {
+    "transpileOnly": true,
+  },
   "compilerOptions": {
+    "skipLibCheck": true,
     "baseUrl": ".",
     "rootDir": "./src",
     "outDir": "./build",
@@ -15,6 +19,6 @@
     "watch": false,
     "strictNullChecks": true
   },
-  "include": ["./**/*"],
-  "exclude": ["prettier.config.js", "./build/*"]
+  "include": ["./**/*.ts"],
+  "exclude": [ "prettier.config.js", "./build/*"]
 }
