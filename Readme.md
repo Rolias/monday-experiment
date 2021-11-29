@@ -1,14 +1,9 @@
-# TypeScript starter kit
+# Monday API Experiment
 
-A bare-bones starter kit for typescript. My [new-project-script](https://github.com/Rolias/new-project-script) repository is a convenient way to clone a repo, get rid of all the old history and have a shiny new repo to work in.
+Read a few columns of data for course coverage information from a Monday board.
 
-## Chrome Extensions
+Monday uses a GraphQl api. The idea of this project was to create a bare minimum project that just reads some data from a given Monday board id. The monday specific api calls are located in:  
+`monday-api.ts`  
+It's broken down into some smaller pieces so  that the function `getBoardData()` can be easily reused by just specifying a different `inserts` parameter. While the package.json loads a number of packages they are mostly for testing and TypeScript type support. The only external packages used are `axios` and `dotenv`. We store our Monday token secret in the .env file and don't make it part of the github project. See `env-example` for the needed enviroment variable name.
 
-When writing a chrome extension, or I suppose for the front end in general, the `tsconfig.json` will need adjustments:
-
-```json
-    "module": "es6",
-    "moduleResolution": "classic",
-```
-
-For node development in mid-2019, the defaults are fine.
+Running `npm start` from the command line is all that's needed to test if things are working.
